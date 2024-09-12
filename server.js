@@ -5,7 +5,7 @@ require('dotenv').config();
 
 const bodyParser = require('body-parser'); 
 app.use(bodyParser.json()); // req.body
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 4000;
 
 // Import the router files
 const userRoutes = require('./routes/userRoutes');
@@ -17,5 +17,5 @@ app.use('/candidate', candidateRoutes);
 
 
 app.listen(PORT, ()=>{
-    console.log('listening on port 3000');
+    console.log(`listening on this ${PORT}`);
 })
